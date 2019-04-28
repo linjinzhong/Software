@@ -8,11 +8,16 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 
 
 ## 安装
-``` c++
-int a = 1;
-int b = 2;
-int c = a+b;
+``` c++  
+int a = 1;  
+int b = 2;  
+int c = a+b;  
+
 ```
+
+	int a = 1;  
+	int b = 2;  
+	int c = a+b;
 
 
 ``` bash  
