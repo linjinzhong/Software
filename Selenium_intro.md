@@ -28,11 +28,26 @@ int c = a+b;
 		int c = a+b;
 
 
-``` bash  
+```bash  
 pip install selenium  
 ls -al
+
 ```
-``` Bash  
+
+```Bash  
 pip install selenium  
 ls -al
+
+```
+
+```Shell  
+pip install selenium  
+ls -al
+
+```
+
+```shell  
+	pip install selenium    
+	ls -al  
+
 ```
