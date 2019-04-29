@@ -67,13 +67,15 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 	input_str.send_keys("watch")  
 	button = browser.find_element_by_id('su')  
 	button.click()  
+	
+	> button = browser.find_element_class_name('bg s_btn')  
+	> 复合class使用如下替换  
+	> button = browser.find_element_by_css_selector('.bg.s_btn')  
+	> 当使用browser.find_elements_by_id('su')，报错  
+	> AttributeError: 'list' object has no attribute 'click'  
+	> 这是因为不是多元素查找，替换为find_element_by_id  
+
 	browser.close()  
-	\# button = browser.find_element_class_name('bg s_btn')  
-	\# 复合class使用如下替换  
-	\# button = browser.find_element_by_css_selector('.bg.s_btn')  
-	\# 当使用browser.find_elements_by_id('su')，报错  
-	\# AttributeError: 'list' object has no attribute 'click'  
-	\# 这是因为不是多元素查找，替换为find_element_by_id  
 ```  
 
 6. 执行JavaScript（登录知乎并且滑动到页面底部并弹框提示你）：  
