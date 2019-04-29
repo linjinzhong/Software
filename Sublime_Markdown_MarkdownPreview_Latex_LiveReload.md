@@ -7,20 +7,20 @@
 前提：ubuntu16.04, sublime text3。
 
 ## 1. 安装 MarkdownPreview
-1. 组合键盘Ctrl+Shift+P调出命令面板。
-2. 输入mdp找到并选中Markdown Preview： Preview in Browser，选择markdown就是传统的本地打开。
+1. 组合键盘`Ctrl+Shift+P`调出命令面板。
+2. 输入`mdp`找到并选中Markdown Preview： Preview in Browser，选择markdown就是传统的本地打开。
 3. 默认浏览器中显示预览结果。
-4. 设置快捷键：Preferences -> Key Bindings打开的文件的右侧栏的中括号中添加一行代码：  
-	**{ "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"}  }**  
-	其中快捷键　**"alt+m"**　可设置为自己喜欢的按键。　　
+4. 设置快捷键：`Preferences -> Key Bindings`打开的文件的右侧栏的中括号中添加一行代码：  
+	**`{ "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"}  }`**  
+	其中快捷键　**`"alt+m"`**　可设置为自己喜欢的按键。　　
 
 上述设置后每次预览都要打开一个新的网页，而且需要手动操作。
 
 
 ## 2. 配置Latex支持
-1. 打开MarkdownPreview的配置文件：	**Preferences -> Package Settings -> Markdown Preview -> Settings**
+1. 打开MarkdownPreview的配置文件：	**`Preferences -> Package Settings -> Markdown Preview -> Settings`**
 2. 输入：  
-	**{
+	**`{
     "markdown_extensions": [
         // MathJax Support(支持 Latex)
         // Danger！！！ GitHub and GitLab is not supported with MathJax. 
@@ -40,15 +40,17 @@
         "github": ["default"],
         "gitlab": ["default"]
     }
-}**
+}`**
 3. 重启sublime text3。
 
 
 ## 3. 安装　LiveReload
-1. 打开MarkdownPreview的配置文件：**Preferences -> Package Settings -> Markdown Preview -> Settings**
-2. 检查左侧"enable_autoreload"条目是否为"true"，若是，跳过。若不是，该为"true"。
-3. Ctrl+Shift+p, 输入 Install Package，输入LiveReload, 回车安装。
-4. 安装成功后, 再次Ctrl+shift+p, 输入LiveReload: Enable/disable plug-ins, 回车, 选择 Simple Reload with delay (400ms)或者Simple Reload，两者的区别仅仅在于后者没有延迟。
+1. 打开MarkdownPreview的配置文件：**`Preferences -> Package Settings -> Markdown Preview -> Settings`**
+2. 检查左侧`enable_autoreload`条目是否为`true`，若是，跳过。若不是，改为`true`。
+3. `Ctrl+Shift+p`, 输入 `Install Package`，输入`LiveReload`, 回车安装。
+4. 安装成功后, 再次`Ctrl+shift+p`, 输入`LiveReload: Enable/disable plug-ins`, 回车, 选择 `Simple Reload with delay (400ms)或者Simple Reload`，两者的区别仅仅在于后者没有延迟。
+5. 一旦更新其他配置导致LiveReload失效，则需要卸载重新安装:  
+6. 卸载LiveReload: `Ctrl+Shift+p`, 输入 `remove Package`，输入`LiveReload`, 回车卸载。
 
 
 ## 4. 总结
