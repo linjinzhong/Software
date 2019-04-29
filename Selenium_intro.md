@@ -196,7 +196,7 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 ```python  
 
 	from selenium import webdriver  
-	**from selenium.common.exceptions import TimeoutException,NoSuchElementException**  
+	from selenium.common.exceptions import TimeoutException,NoSuchElementException  
 	browser = webdriver.Chrome()  
 	try:  
 		browser.get('https://www.baidu')  
