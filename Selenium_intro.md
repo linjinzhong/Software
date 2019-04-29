@@ -1,5 +1,5 @@
 # <div align="center"> Selenium </div>
-<div align="center"> ![selenium](https://raw.githubusercontent.com/linjinzhong/Picture/master/selenium.png) </div>  
+ <div align="center"> ![selenium](https://raw.githubusercontent.com/linjinzhong/Picture/master/selenium.png) </div>  
 
 ## 介绍
 selenium是一个用于Web应用程序测试的工具。Selenium测试直接运行在浏览器中，就像真正的用户在操作一样。支持的浏览器包括IE，Mozilla Firefox，Safari，Google Chrome，Opera等。在爬虫中主要用来解决JavaScript渲染问题。当requests和urllib无法正常获取网页内容时，可以用selenium模拟浏览器进行网页加载。  
