@@ -103,19 +103,18 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 ```  
 
 8. 等待：  
-	1. 隐式等待：  
-	```python
-		
+	1. 隐式等待：
+
+	<pre>		
 		browser = webdriver.Chrome()    
 		browser.get('https://www.zhihu.com/explore')  
 		<b>browser.implicitly_wait(5)</b>  
 		input_str = browser.find_element_by_class_name('zu-top-add-question')  
 		print(input_str)  
-	```  
+	</pre>
 
 	2. 显示等待：显式等待,就是明确的要等到某个元素的出现或者是某个元素的可点击等条件,等不到,就一直等,除非在规定的时间之内都没找到,那么就跳出Exception。    
-	```python  
-
+	<pre>
 		from selenium import webdriver  
 		from selenium.webdriver.common.by import By  
 		from selenium.webdriver.support.ui import WebDriverWait  
@@ -126,11 +125,10 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 		input_str = wait.until(EC.presence_of_element_located((By.ID, 'q')))  
 		button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, '.btn-search')))  
 		print(input_str, button)  
-	```  
+	</pre>
 
 	3. 常见判断条件：    
-	```python  
-
+	<pre>
 		title_is 标题是某内容  
 		title_contains 标题包含某内容  
 		presence_of_element_located 元素加载出，传入定位元组，如(By.ID, 'p')  
@@ -147,7 +145,7 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 		element_located_to_be_selected 元素可选择，传入定位元组  
 		element_selection_state_to_be 传入元素对象以及状态，相等返回True，否则返回False  
 		element_located_selection_state_to_be 传入定位元组以及状态，相等返回True，否则返回False  
-	```  	 
+	</pre>
 
 9. 前进和后退：  
 ```python  
