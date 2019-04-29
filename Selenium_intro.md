@@ -12,29 +12,34 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 1. 安装selenium: `pip install selenium`  
 
 2. 下载驱动  
-需要下载相应驱动浏览器的驱动（注意对应软件版本号和驱动号）    
+需要下载相应驱动浏览器的驱动（注意对应软件版本号和驱动号）  
 | Chrome | [Chrome驱动](https://sites.google.com/a/chromium.org/chromedriver/downloads)|  
 | Firefox| [Firefox驱动](https://github.com/mozilla/geckodriver/releases)|  
 | Edge| [Edge驱动](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|  
 | Safari| [Safari驱动](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|  
 
-3. 安装驱动
+3. 安装驱动  
 解驱动解压、添加执行权限、移动到`/usr/bin` 或者 `/usr/local/bin.`  
 
 ## 基本使用
 在使用python写爬虫的时候，主要使用selenium的webdriver功能。  
+
 1. 申明浏览器对象：  
-```python  
+```python
+
 	from selenium import webdriver  
 	browser = webdriver.Chrome()  
 	browser = webdriver.Firefox()  
 ```  
+
 2. 访问页面：  
-```python  
-browser.get('https://www.baidu.com')  
-print(browser.page_source)  
-browser.close()  
+```python
+	
+	browser.get('https://www.baidu.com')  
+	print(browser.page_source)  
+	browser.close()  
 ```  
+
 3. 查找元素：  
 ```python   
 	A = browser.find_element_by_id('css_index')  
