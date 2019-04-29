@@ -25,20 +25,18 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 在使用python写爬虫的时候，主要使用selenium的webdriver功能。  
 
 1. 申明浏览器对象：  
-```python  
+``` python  
 	from selenium import webdriver  
-	browser = webdriver.Chrome()     
-	# browser = webdriver.Firefox()  
-
-	``` 
+	browser = webdriver.Chrome()  
+	browser = webdriver.Firefox()  
+```  
 
 2. 访问页面：  
 ```python  
-	browser.get('https://www.baidu.com')  
-	print(browser.page_source)  
-	browser.close()  
-
-	```  
+browser.get('https://www.baidu.com')  
+print(browser.page_source)  
+browser.close()  
+```  
 
 3. 查找元素：  
 ```python   
