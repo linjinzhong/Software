@@ -190,7 +190,7 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 	browser.get('https://python.org')  
 ```  
 
-12. 异常处理（查找一个不存在的元素例子）：     
+12. 异常处理（查找一个不存在的元素例子）：  
 ```python  
 
 	from selenium import webdriver  
