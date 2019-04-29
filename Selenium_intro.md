@@ -29,7 +29,7 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 
 	from selenium import webdriver  
 	browser = webdriver.Chrome()  
-	\# browser = webdriver.Firefox()  
+	browser = webdriver.Firefox()  
 ```  
 
 2. 访问页面：  
@@ -66,11 +66,11 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 	input_str.clear()  
 	input_str.send_keys("watch")  
 	button = browser.find_element_by_id('su')  
-	\#  button = browser.find_element_class_name('bg s_btn')  
+	button.click()  
+	browser.close()  
+	\# button = browser.find_element_class_name('bg s_btn')  
 	\# 复合class使用如下替换  
 	\# button = browser.find_element_by_css_selector('.bg.s_btn')  
-	button.click()  
-	\# browser.close()  
 	\# 当使用browser.find_elements_by_id('su')，报错  
 	\# AttributeError: 'list' object has no attribute 'click'  
 	\# 这是因为不是多元素查找，替换为find_element_by_id  
