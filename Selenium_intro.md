@@ -42,7 +42,6 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 	browser.close()  
 
 ```  
-
 3. 查找元素：  
 
 ```python  
