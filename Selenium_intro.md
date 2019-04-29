@@ -67,7 +67,7 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 	input_str.send_keys("watch")  
 	button = browser.find_element_by_id('su')  
 	button.click()  
-	
+
 	> button = browser.find_element_class_name('bg s_btn')  
 	> 复合class使用如下替换  
 	> button = browser.find_element_by_css_selector('.bg.s_btn')  
@@ -105,10 +105,10 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 8. 等待：  
 	1. 隐式等待：  
 	```python
-
-		browser = webdriver.Chrome()  
+		
+		browser = webdriver.Chrome()    
 		browser.get('https://www.zhihu.com/explore')  
-		**browser.implicitly_wait(5)**  
+		<b>browser.implicitly_wait(5)</b>  
 		input_str = browser.find_element_by_class_name('zu-top-add-question')  
 		print(input_str)  
 	```  
@@ -117,14 +117,14 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 	```python  
 
 		from selenium import webdriver  
-		**from selenium.webdriver.common.by import By**  
-		**from selenium.webdriver.support.ui import WebDriverWait**  
-		**from selenium.webdriver.support import expected_conditions as EC**  
+		from selenium.webdriver.common.by import By  
+		from selenium.webdriver.support.ui import WebDriverWait  
+		from selenium.webdriver.support import expected_conditions as EC  
 		browser = webdriver.Chrome()  
 		browser.get('https://www.taobao.com/')  
-		**wait = WebDriverWait(browser, 10)  
+		wait = WebDriverWait(browser, 10)  
 		input_str = wait.until(EC.presence_of_element_located((By.ID, 'q')))  
-		button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, '.btn-search')))**  
+		button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, '.btn-search')))  
 		print(input_str, button)  
 	```  
 
