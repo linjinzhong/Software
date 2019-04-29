@@ -6,48 +6,20 @@ selenium是一个用于Web应用程序测试的工具。Selenium测试直接运�
 
 Selenium可以根据我们的指令，让浏览器自动加载页面，获取需要的数据，甚至页面截屏，或者判断网站上某些动作是否发生。Selenium自己不带浏览器，不支持浏览器的功能，它需要与第三方浏览器结合在一起才能使用。
 
+[官方文档](https://selenium-python.readthedocs.io/installation.html)
 
-## 安装
-``` c++  
-int a = 1;  
-int b = 2;  
-int c = a+b;  
+## 安装  
+1. 安装selenium  
+	```  
+		pip install selenium  
+	```
+2. 安装驱动  
+需要下载相应驱动浏览器的驱动（注意对应软件版本号和驱动号）    
+| Chrome | [Chrome驱动](https://sites.google.com/a/chromium.org/chromedriver/downloads)|  
+| Firefox| [Firefox驱动](https://github.com/mozilla/geckodriver/releases)|  
+| Edge| [Edge驱动](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|  
+| Safari| [Safari驱动](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|  
 
-```
-
-```python  
-int a = 1;  
-int b = 2;  
-int c = a+b;  
-
-```
-
-
-		int a = 1;  
-		int b = 2;  
-		int c = a+b;
+3. 
 
 
-```bash  
-pip install selenium  
-ls -al
-
-```
-
-```Bash  
-pip install selenium  
-ls -al
-
-```
-
-```Shell  
-pip install selenium  
-ls -al
-
-```
-
-```shell  
-	pip install selenium    
-	ls -al  
-
-```
