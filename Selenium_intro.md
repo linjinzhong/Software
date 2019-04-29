@@ -9,8 +9,13 @@ Selenium可以根据我们的指令，让浏览器自动加载页面，获取需
 [官方文档](https://selenium-python.readthedocs.io/installation.html)
 
 ## 安装  
-1. 安装selenium  
-	```  
+1. 安装selenium: `pip install selenium`  
+2. 安装selenium:
+	```bash
+		pip install selenium
+	```
+2. 安装selenium:
+	``` bash  
 		pip install selenium  
 	```
 2. 安装驱动  
