@@ -47,7 +47,7 @@ browser.close()
 4. 多元素查找：  
 ```python  
 	browser.find_elements_by_id('xx xx')  
-```
+```  
 5. 元素交互：  
 ```python  
 	input_str = browser.find_element_by_id('kw')  
@@ -64,8 +64,7 @@ browser.close()
 	# 当使用browser.find_elements_by_id('su')，报错  
 	# AttributeError: 'list' object has no attribute 'click'  
 	# 这是因为不是多元素查找，替换为find_element_by_id  
-```
-
+```  
 6. 执行JavaScript（登录知乎并且滑动到页面底部并弹框提示你）：  
 ```python
 	browser = webdriver.Chrome()  
@@ -73,7 +72,6 @@ browser.close()
 	browser.execute_script('window.scrollTo(0, document.body.scrollHeight)')  
 	browser.execute_script('alert("To Bottom")')  
 ```  
-
 7. 获取属性、文本、ID、位置：  
 ```python
 	logo = browser.find_element_by_id('zh-top-link-logo')  
@@ -86,8 +84,7 @@ browser.close()
 	print(input.location)  
 	print(input.tag_name)  
 	print(input.size)  
-```
-
+```  
 8. 等待：  
 	1. 隐式等待：  
 	```python  
@@ -96,8 +93,7 @@ browser.close()
 		**browser.implicitly_wait(5)**  
 		input_str = browser.find_element_by_class_name('zu-top-add-question')  
 		print(input_str)  
-	```
-
+	```  
 	2. 显示等待：显式等待,就是明确的要等到某个元素的出现或者是某个元素的可点击等条件,等不到,就一直等,除非在规定的时间之内都没找到,那么就跳出Exception。    
 	```python  
 		from selenium import webdriver  
@@ -110,8 +106,7 @@ browser.close()
 		input_str = wait.until(EC.presence_of_element_located((By.ID, 'q')))  
 		button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, '.btn-search')))**  
 		print(input_str, button)  
-	```
-
+	```  
 	3. 常见判断条件：    
 	```python  
 		title_is 标题是某内容  
@@ -130,8 +125,7 @@ browser.close()
 		element_located_to_be_selected 元素可选择，传入定位元组  
 		element_selection_state_to_be 传入元素对象以及状态，相等返回True，否则返回False  
 		element_located_selection_state_to_be 传入定位元组以及状态，相等返回True，否则返回False  
-	```	 
-
+	```  	 
 9. 前进和后退：  
 ```python  
 	import time  
@@ -143,8 +137,7 @@ browser.close()
 	browser.back()  
 	browser.forward()    
 	browser.close()  
-```
-
+```  
 10. cookie操作：  
 ```python  
 	from selenium import webdriver  
@@ -155,9 +148,8 @@ browser.close()
 	print(browser.get_cookies())  
 	**browser.delete_all_cookies()**  
 	print(browser.get_cookies())  
-```
-
-11. 选项卡管理：通过执行js命令实现新开选项卡**`window.open()`**，不同选项卡是存在列表**`browser.window_handles`**，通过**`browser.window_handles[0]`**可以取到第一个选项卡  
+```  
+11. 选项卡管理：通过执行js命令实现新开选项卡`window.open()`，不同选项卡是存在列表`browser.window_handles`，通过`browser.window_handles[0]`可以取到第一个选项卡  
 ```python  
 	import time  
 	from selenium import webdriver  
@@ -170,8 +162,7 @@ browser.close()
 	time.sleep(2)  
 	browser.switch_to.window(browser.window_handles[0])  
 	browser.get('https://python.org')  
-```
-
+```  
 12. 异常处理（查找一个不存在的元素例子）：     
 ```python  
 	from selenium import webdriver  
@@ -187,7 +178,7 @@ browser.close()
 		print('No Element')  
 	finally:  
 		browser.close()  
-```
+```  
 
 Reference  
 [参考1](https://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.common.action_chains)
